@@ -19,15 +19,3 @@ do {
 } while (continuar.toLowerCase() === "s");
 
 console.log("Encerrando o programa...")
-// let entrada = readline.question("Digite uma palavra: ");
-// let palindromo = entrada.toLowerCase().replace(/[^a-z]/g, ""); // No replace (método que substitui uma coisa por outra), o REGEX '/[^a-z]/g' substitui qualquer caractere que não seja letra por nada. Basicamente remove.
-// let palindromoInvertido = palindromo.split("").reverse().join("");
-// if (palindromo === palindromoInvertido) {
-//   console.log(
-//     `Sua palavra invertida é: ${palindromoInvertido}. Ou seja, é palíndromo!`
-//   );
-// } else {
-//   console.log(
-//     `Sua palavra invertida é: ${palindromoInvertido}. Ou seja, não é palíndromo.`
-//   );
-// }
