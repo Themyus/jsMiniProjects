@@ -12,8 +12,13 @@ function ehPalindromo(texto) {
 }
 
 do {
-  let texto = readline.question("Digite uma palavra ou frase: ");
-  ehPalindromo(texto);
+  let palavra = readline.question("Digite uma palavra ou frase: ");
+  ehPalindromo(palavra);
+  
+  var continuar = readline.question("Quer testar outra? (s/n): ");
+} while (continuar.toLowerCase() === "s");
+
+console.log("Encerrando o programa...")
 // let entrada = readline.question("Digite uma palavra: ");
 // let palindromo = entrada.toLowerCase().replace(/[^a-z]/g, ""); // No replace (método que substitui uma coisa por outra), o REGEX '/[^a-z]/g' substitui qualquer caractere que não seja letra por nada. Basicamente remove.
 // let palindromoInvertido = palindromo.split("").reverse().join("");
