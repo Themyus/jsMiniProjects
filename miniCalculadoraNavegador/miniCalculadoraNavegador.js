@@ -1,42 +1,56 @@
-do {
-  const a = Number(prompt("Digite um número: "));
-  const b = Number(prompt("Digite outro número: "));
+const display = document.querySelector("#display");
+let valor1 = "";
+let valor2 = "";
+let operacao = "";
 
-  function soma() {
-    return a + b;
-  }
-  function subtracao() {
-    return a - b;
-  }
-  function multiplicacao() {
-    return a * b;
-  }
-  function divisao() {
-    return a / b;
-  }
+// Botões de número
+document.querySelectorAll(".numero").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    display.value += botao.textContent;
+  });
+});
 
-  let operacao = prompt(
-    "Digite a operação que deseja efetuar entre os dois números (+/-/x/:) (0 para cancelar): "
-  );
+// Botões de operação
+document.querySelectorAll(".operacao").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    valor1 = display.value;
+    operacao = botao.textContent;
+    display.value = "";
+  });
+});
 
-  switch (operacao) {
-    case "+":
-      console.log("O resultado é: ", soma());
-      break;
-    case "-":
-      console.log("O resultado é: ", subtracao());
-      break;
-    case "x":
-      console.log("O resultado é: ", multiplicacao());
-      break;
-    case ":":
-      console.log("O resultado é: ", divisao());
-      break;
-    case "0":
-      console.log("Cancelando operação...");
-      break;
-    default:
-      console.log("Valor inválido! Digite +, -, x, :, ou 0 para encerrar: ");
+// Funções das operações
+const subtracao = () => {
+  return Number(valor1) - Number(valor2);
+};
+const soma = () => {
+  return Number(valor1) + Number(valor2);
+};
+const multiplicacao = () => {
+  return Number(valor1) * Number(valor2);
+};
+const divisao = () => {
+  return Number(valor1) / Number(valor2);
+};
+
+// Botão de igual
+document.querySelector("#igual").addEventListener("click", () => {
+  valor2 = display.value;
+  if (operacao === "-") {
+    display.value = subtracao();
+  } else if (operacao === "+") {
+    display.value = soma();
+  } else if (operacao === "x") {
+    display.value = multiplicacao();
+  } else if (operacao === ":") {
+    display.value = divisao();
   }
-  continuar = prompt("Deseja continuar? (s/n): ");
-} while (continuar.toLowerCase() == "s");
+});
+
+// Botão de limpar
+document.querySelector("#limpar").addEventListener("click", () => {
+  valor1 = "";
+  valor2 = "";
+  operacao = "";
+  display.value = "";
+});
