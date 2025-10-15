@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+#display {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  text-align: right;
+  padding: 10px;
+  font-size: 150%;
+  border-radius: 5px;
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
+  gap: 10px;
+}
+
+.titulo {
+  color: rgb(50, 80, 64);
+  display: flex;
+  justify-content: center;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.numero {
+  background-color: rgb(218, 245, 231);
+  color: rgb(31, 49, 40);
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 150%;
+}
+
+.operacao {
+  background-color: rgb(218, 245, 231);
+  color: rgb(31, 49, 40);
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 150%;
+}
+
+#igual {
+  background-color: rgb(218, 245, 231);
+  color: rgb(31, 49, 40);
+  grid-column: 3;
+  grid-row: 4;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 150%;
+}
+
+#limpar {
+  background-color: rgb(218, 245, 231);
+  color: rgb(31, 49, 40);
+  grid-column: 1;
+  grid-row: 4;
+  border-radius: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 150%;
+}
+
+#botao0 {
+  grid-column: 2;
+  grid-row: 4;
+}
+#botao1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+#botao2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+#botao3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+#botao4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+#botao5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+#botao6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+#botao7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+#botao8 {
+  grid-column: 2;
+  grid-row: 3;
+}
+#botao9 {
+  grid-column: 3;
+  grid-row: 3;
+}
+#botaoSoma {
+  grid-column: 4;
+  grid-row: 1;
+}
+#botaoSubtracao {
+  grid-column: 4;
+  grid-row: 2;
+}
+#botaoDivisao {
+  grid-column: 4;
+  grid-row: 3;
+}
+#botaoMultiplicacao {
+  grid-column: 4;
+  grid-row: 4;
+}
